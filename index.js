@@ -103,6 +103,10 @@ app.post("/slot_data", (req, res) => {
   res.send("Slot data added successfully");
 });
 
+app.get('/', (req, res) => {
+  res.send("HI");
+});
+
 module.exports = (req, res) => {
   app(req, res);  // This calls your Express app with the incoming request
 };
