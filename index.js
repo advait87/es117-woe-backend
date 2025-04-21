@@ -103,7 +103,6 @@ app.post("/slot_data", (req, res) => {
   res.send("Slot data added successfully");
 });
 
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
-});
+module.exports = (req, res) => {
+  app(req, res);  // This calls your Express app with the incoming request
+};
